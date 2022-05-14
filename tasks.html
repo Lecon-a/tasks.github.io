@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="This todo list offline website helps manage your day-to-day activity in order, to help manage time for efficiency and effectiveness.">
+    <meta name="author" content="Sunday P. Afolabi">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Today's Task Manager</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1 class="title topmost_title">Tasks</h1>
+    <p id="moving_text">
+        <marquee>Is there anything you want to do today?</marquee>
+    </p>
+    <div class="container">
+        <div class="sidebar">
+            <h1 class="title">Add New Task</h1>
+            <form>
+                <div class="group_control">
+                    <input autofocus type="text" class="task_input" placeholder="Enter new task">
+                </div>
+                <input class="add_btn" type="submit" value="Add Task">
+            </form>
+        </div>
+        <div class="main">
+            <h2 id="heading">Todo List</h2>
+            <div class="list_container">
+                <ul class="tasks">
+                </ul>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <p class="footer_name">SPLearning&copy;2022</p>
+        <p class="footer_contact">You can reach us via: spog4true@gmail.com, or +234 816-5115-527</p>
+    </footer>
+    <script src="js/action.js"></script>
+</body>
+</html>

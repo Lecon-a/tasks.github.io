@@ -1,0 +1,203 @@
+* {
+    margin: 0;
+    background-color: black;
+}
+
+body {
+    font-family: Verdana, Tahoma, sans-serif;
+    color: #aaa;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+}
+
+.sidebar, .main {
+    padding: 2em;
+}
+
+.sidebar {
+    flex: 1.5;
+    border-radius: 4px;
+    padding-top: 8em;
+    text-align: center;
+}
+
+.main {
+    flex: 3.5;
+}
+
+.title {
+    margin: 0 0 32px;
+    text-align: center;
+}
+
+.topmost_title {
+    padding: 1em 0 0;
+    margin: 0 0 8px;
+}
+
+form {
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.group_control {
+    margin: 0 0 16px;
+}
+
+.task_input, .add_btn {
+    padding: 8px;
+    outline: none;
+    border: none;
+    color: #aaa;
+}
+
+.task_input {
+    font-size: 18px;
+    text-align: center;
+    border-radius: 23px;
+    background-color: rgba(150, 150, 150, 0.15);
+}
+
+.add_btn {
+    border: 2px solid #aaa;
+    cursor: pointer;
+    border-radius: 4px;
+    padding: 16px 12px;
+    font-weight: bold;
+}
+
+.add_btn:hover {
+    background-color: #aaa;
+    color: #000;
+}
+
+.main h2, .main div.list_container {
+    padding: 0 16px;
+    border-left: 2px solid #aaa;
+}
+
+#heading {
+    margin: 0 0 16px;
+}
+
+.main div.list_container {
+    padding: 16px 0;
+}
+
+ul {
+    height: 310px;
+    overflow-y: auto;
+    width: 50%;
+    scrollbar-width: 4px;
+}
+
+ul, li {
+    list-style: none;
+}
+
+@keyframes hide {
+    0% {
+        opacity: 1;
+        padding: 16px;
+        margin-bottom: 8px;
+    }
+
+    75% {
+        opacity: 0;
+        padding: 0;
+        margin-bottom: 0;
+    }
+
+    100% {
+        opacity: 0;
+        padding: 0;
+        margin-bottom: 0;
+    }
+}
+
+ul li {
+    margin: 0 0 8px;
+    border-bottom: 2px solid #aaa;
+    border-left: 2px solid #aaa;
+    border-bottom-left-radius: 3px;
+    padding: 8px 16px 16px; 
+    width: 60%;
+    word-wrap: break-word;
+    color: #aaa;
+    position: relative;
+
+    animation-name: hide;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+    animation-play-state: paused;
+}
+
+ul li:last-child {
+    margin-bottom: 0;
+}
+
+#moving_text {
+    padding: 2em 3em .5em;
+    color: gold;
+}
+
+.delete{
+    position: absolute;
+    right: 8px;
+    border-radius: 50%;
+    padding: 0 5px 4px;
+    cursor: pointer;
+    background-color: rgba(100, 100, 100, 0.15);
+}
+
+.delete:hover {
+    color: red;
+    background-color: #000;
+}
+
+.footer {
+    position: relative;
+    bottom: 0;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.footer > * {  
+    background-color: rgba(50, 50, 50, 0.30);
+}
+
+.footer_name {
+    padding: 16px 0 4px;
+    box-sizing: border-box;
+}
+
+.footer_contact {
+    font-size: 8pt;
+    padding: 2px 0 8px;
+}
+
+
+
+
+@media screen and (max-width: 600px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar .main {
+        flex: 1;
+        width: 100%;
+    }
+
+    ul {
+        width: 100%;
+    }
+
+    ul li {
+        width: 100%;
+    }
+
+}
